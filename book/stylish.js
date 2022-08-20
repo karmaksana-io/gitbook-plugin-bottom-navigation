@@ -20,6 +20,8 @@ require(["gitbook", "jQuery"], function(gitbook, $) {
     const titleColor = config.titleColor || color;
     const main = {color, borderColor: `${color}`, cursor: "pointer"};
     const subs = ['cardIcon', 'cardTitle'];
+    
+    $(".markdown-section a").attr("target", "_self");
 
     if (config.pageInnerWidth) {
       $('.page-inner').attr(`style', 'width: ${config.pageInnerWidth} !important`);
