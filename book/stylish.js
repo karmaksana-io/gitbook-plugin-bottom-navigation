@@ -22,6 +22,10 @@ require(["gitbook", "jQuery"], function(gitbook, $) {
     const subs = ['cardIcon', 'cardTitle'];
     
     $(".markdown-section a").attr("target", "_self");
+    
+    if(! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      $(".book").addClass("with-summary");
+    }
 
     if (config.pageInnerWidth) {
       $('.page-inner').attr(`style', 'width: ${config.pageInnerWidth} !important`);
